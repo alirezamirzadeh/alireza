@@ -1,9 +1,24 @@
-export default function Home() {
+import About from "@/components/About";
+import Hobbies from "@/components/Hobbies";
+import Line from "@/components/Line";
+import ListBlog from "@/components/ListBlog";
+import Photos from "@/components/Photos";
+import SideProjects from "@/components/SideProjects";
+import Telegram from "@/components/Telegram";
+
+export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <h1>
-        Hi 👋, <span>I'm Alirzea!</span>
-      </h1>
+    <main >
+      <About />
+      <Line />
+      <SideProjects />
+      <Line />
+      <ListBlog />
+      <Line />
+      <Photos />
+      <Line />
+      <Hobbies />
+      <Telegram />
     </main>
   );
 }

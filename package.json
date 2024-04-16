@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.39.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "geist": "^1.2.0",
     "next": "14.0.4",
+    "next-themes": "^0.2.1",
     "prettier": "^3.1.0",
     "react": "^18",
     "react-dom": "^18"
