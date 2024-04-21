@@ -16,7 +16,7 @@ const Photos = () => {
             height={120}
             src={`/images/photo${photo}.jpg`} 
             alt="photo"
-            className="rounded-xl h-32"
+            className="h-32 rounded-xl"
           />
         ))}
       </div>

@@ -22,7 +22,7 @@ const UsesPage = () => {
   return (
     <div className="mt-28">
       <div className="opacity-75">
-        I've been spending hours and hours at my desk every day. So, I've been
+        I`&apos;`ve been spending hours and hours at my desk every day. So, I`&apos;`ve been
         continuously improving my workspace in order to boost my productivity.
       </div>
       <div className="mt-8 grid grid-cols-2 gap-6 max-sm:grid-cols-1 ">
