@@ -30,6 +30,7 @@ const GuestbookPage = () => {
       .insert([{ username: user, message }]);
 
     if (res.status === 200 || res.status === 201) {
+      setMessage("")
       const { data } = await supabase.from("guestbook").select();
       data && setPosts(data);
     }
@@ -48,7 +49,7 @@ const GuestbookPage = () => {
     async function fetchData() {
       try {
         const { data } = await supabase.from("guestbook").select();
-        data && setPosts(data);
+        data && setPosts(data.reverse());
       } catch (e) {
         console.error(e);
       }
