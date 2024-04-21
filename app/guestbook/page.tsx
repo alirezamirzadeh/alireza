@@ -20,22 +20,17 @@ const GuestbookPage = () => {
       setUser(user?.identities && user?.identities[0].identity_data?.name || null);
       setCheckAuth(true)
     }
-    console.log(111,user);
     
 
   };
 
   const handelAddMessage = async () => {
-    console.log(222,user);
     
-    const {data, error} = await supabase.from('guestbook').insert([{ username:user,message}]);
+    const res = await supabase.from('guestbook').insert([{ username:user,message}]);
     
-    console.log(333,data,error,message);
-    
-    if(error) {
-        return console.error(error);
-    }
-    setPosts(prev => [...prev, data && data[0]]);
+    console.log(333,res,message);
+  
+    setPosts(prev => [...prev, res.data && res?.data[0]]);
 
   }
 
@@ -52,6 +47,8 @@ const GuestbookPage = () => {
     async function fetchData() {
       try {
         const { data } = await supabase.from("guestbook").select();
+        console.log(44,data);
+        
         data && setPosts(data);
       } catch (e) {
         console.error(e);
