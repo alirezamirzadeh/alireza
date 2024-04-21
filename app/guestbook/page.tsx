@@ -8,8 +8,7 @@ const GuestbookPage = () => {
   const [posts, setPosts] = useState<any[]>([]);
   const [checkAuth, setCheckAuth] = useState<boolean>(false);
   const [user, setUser] = useState<any>(null);
-  const [message, setMessage] = useState('');
-
+  const [message, setMessage] = useState("");
 
   const checkAuthentication = async () => {
     const {
@@ -17,22 +16,24 @@ const GuestbookPage = () => {
     } = await supabase.auth.getUser();
 
     if (user) {
-      setUser(user?.identities && user?.identities[0].identity_data?.name || null);
-      setCheckAuth(true)
+      setUser(
+        (user?.identities && user?.identities[0].identity_data?.user_name) ||
+          null
+      );
+      setCheckAuth(true);
     }
-    
-
   };
 
   const handelAddMessage = async () => {
-    
-    const res = await supabase.from('guestbook').insert([{ username:user,message}]);
-    
-    console.log(333,res,message);
-  
-    setPosts(prev => [...prev, res.data && res?.data[0]]);
+    const res = await supabase
+      .from("guestbook")
+      .insert([{ username: user, message }]);
 
-  }
+    if (res.status === 200 || res.status === 201) {
+      const { data } = await supabase.from("guestbook").select();
+      data && setPosts(data);
+    }
+  };
 
   const handelSingIN = async () => {
     await supabase.auth.signInWithOAuth({
@@ -47,8 +48,6 @@ const GuestbookPage = () => {
     async function fetchData() {
       try {
         const { data } = await supabase.from("guestbook").select();
-        console.log(44,data);
-        
         data && setPosts(data);
       } catch (e) {
         console.error(e);
@@ -69,11 +68,11 @@ const GuestbookPage = () => {
               placeholder="Your message..."
               required
               value={message}
-              onChange={e => setMessage(e.target.value)}
+              onChange={(e) => setMessage(e.target.value)}
             />
-          
+
             <button
-            onClick={handelAddMessage}
+              onClick={handelAddMessage}
               type="button"
               className="absolute right-1 top-1 flex h-8 w-16 items-center justify-center rounded bg-neutral-200 px-2 py-1 font-medium text-neutral-900 dark:bg-neutral-700 dark:text-neutral-100"
             >
@@ -81,7 +80,10 @@ const GuestbookPage = () => {
             </button>
           </form>
         ) : (
-          <button className="flex cursor-pointer items-center justify-center gap-2 rounded-md border border-neutral-200 bg-neutral-50  px-4 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800" onClick={handelSingIN}>
+          <button
+            className="flex cursor-pointer items-center justify-center gap-2 rounded-md border border-neutral-200 bg-neutral-50  px-4 py-2 text-sm dark:border-neutral-700 dark:bg-neutral-800"
+            onClick={handelSingIN}
+          >
             <Image
               alt="github"
               src={"/images/icons/github.svg"}
