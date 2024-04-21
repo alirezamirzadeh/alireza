@@ -32,7 +32,7 @@ export async function getPost(slug: string) {
   return posts.find((post) => post.slug === slug);
 }
 
-export default async function get({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPost(params.slug);
 
   if (!post) return notFound();
