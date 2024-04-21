@@ -32,7 +32,7 @@ const GuestbookPage = () => {
     if (res.status === 200 || res.status === 201) {
       setMessage("")
       const { data } = await supabase.from("guestbook").select();
-      data && setPosts(data);
+      data && setPosts(data.reverse());
     }
   };
 
