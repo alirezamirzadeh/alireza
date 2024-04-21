@@ -5,13 +5,6 @@ import fs from "fs/promises";
 import matter from "gray-matter";
 import path from "path";
 
-type PostType = {
-  title: string;
-  slug: string;
-  date: string;
-  description: string;
-  body: string;
-};
 
 export async function getPosts() {
   const posts = await fs.readdir("./content");  
@@ -22,7 +15,7 @@ export async function getPosts() {
         const filePath = `./content/${file}`;
         const fileContent = await fs.readFile(filePath, "utf8");
         const { data, content } = matter(fileContent);
-        return { ...data,slug:file.split(".")[0], body: content } as PostType;
+        return { ...data,slug:file.split(".")[0], body: content };
       })
   );
 }
