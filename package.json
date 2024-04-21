@@ -13,7 +13,6 @@
     "@mdx-js/mdx": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.2",
-    "@supabase/ssr": "^0.3.0",
     "@supabase/supabase-js": "^2.42.5",
     "@types/mdx": "^2.0.13",
     "eslint-config-prettier": "^9.1.0",

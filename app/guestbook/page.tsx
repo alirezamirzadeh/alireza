@@ -5,9 +5,9 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const GuestbookPage = () => {
-  const [posts, setPosts] = useState([]);
-  const [checkAuth, setCheckAuth] = useState(false);
-  const [user, setUser] = useState(null);
+  const [posts, setPosts] = useState<any[]>([]);
+  const [checkAuth, setCheckAuth] = useState<boolean>(false);
+  const [user, setUser] = useState<any>(null);
   const [message, setMessage] = useState('');
 
 
@@ -18,7 +18,7 @@ const GuestbookPage = () => {
 
     if (user) {
       setUser(user || null);
-      checkAuth(true)
+      setCheckAuth(true)
     }
 
   };
@@ -29,7 +29,7 @@ const GuestbookPage = () => {
     if(error) {
         return console.error(error);
     }
-    setPosts(prev => [...prev, data[0]]);
+    setPosts(prev => [...prev, data && data[0]]);
 
   }
 
@@ -46,7 +46,7 @@ const GuestbookPage = () => {
     async function fetchData() {
       try {
         const { data } = await supabase.from("guestbook").select();
-        setPosts(data);
+        data && setPosts(data);
       } catch (e) {
         console.error(e);
       }

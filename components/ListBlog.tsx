@@ -1,4 +1,4 @@
-import { getPosts } from "@/app/blog/[slug]/page";
+import { getPosts } from "@/lib/post";
 import Link from "next/link";
 import React from "react";
 

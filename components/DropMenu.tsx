@@ -14,7 +14,7 @@ interface DropdownItem {
 
 interface DropdownProps {
     triggerIcon?: React.ReactNode;
-    menuItems: DropdownItem[];
+    menuItems?: DropdownItem[];
 }
 
 const Dropdown: React.FC<DropdownProps> = () => {
@@ -25,9 +25,9 @@ const Dropdown: React.FC<DropdownProps> = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleLinkClick = (item: DropdownItem) => {
-        if (item.onClick) {
-            item.onClick();
+    const handleLinkClick = (e: any) => {
+        if (e.onClick) {
+            e.onClick();
         }
         setIsOpen(false); // Close dropdown after item click
     };
@@ -61,12 +61,12 @@ const Dropdown: React.FC<DropdownProps> = () => {
       </div>
       {isOpen && (
                 <div className="absolute z-10 mt-2 w-48 rounded-md bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-zinc-800" onClick={toggleDropdown}>
-                    {routes.map((item) => (
+                    {routes?.map((item) => (
                         <Link
                             key={item.title} 
                             href={item.href}
-                            className="block px-4 py-2 text-left text-base text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-zinc-700"
-                            onClick={() => handleLinkClick(item)}
+                            className="block px-4 py-2 text-left  text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-zinc-700"
+                            onClick={(e) => handleLinkClick(e)}
                         >
                             {item.title}
                         </Link>
