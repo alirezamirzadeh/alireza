@@ -11,13 +11,13 @@ export type Post = {
 };
 
 export async function getPosts() {
-  const posts = await fs.readdir("./posts/");
+  const posts = await fs.readdir("./content/");
 
   return Promise.all(
     posts
       .filter((file) => path.extname(file) === ".mdx")
       .map(async (file) => {
-        const filePath = `./posts/${file}`;
+        const filePath = `./content/${file}`;
         const fileContent = await fs.readFile(filePath, "utf8");
         const { data, content } = matter(fileContent);
 
