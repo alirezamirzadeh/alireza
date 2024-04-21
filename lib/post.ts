@@ -28,5 +28,7 @@ export async function getPosts() {
 
 export async function getPost(slug: string) {
   const posts = await getPosts();
+  console.log(9999,posts);
+  
   return posts.find((post) => post.slug === slug);
 }
