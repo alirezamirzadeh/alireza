@@ -15,13 +15,13 @@ const Footer = () => {
   return (
     <div className="my-10 max-sm:px-4 ">
       <Line />
-      <div className="flex items-center justify-between gap-4 max-sm:flex-col " >
+      <div className="flex items-center justify-between gap-4 max-sm:flex-col ">
         <span className="flex gap-1 opacity-50 dark:opacity-20  ">
           Follow Me :)
         </span>
         <div className="flex gap-6 opacity-50 dark:contrast-50 ">
           {socialMedia.map((item) => (
-            <Link href={item.url} key={item.name}>
+            <Link href={item.url} key={item.name} target="_blank">
               <Image
                 src={`/images/icons/${item.name}.svg`}
                 alt={item.name}

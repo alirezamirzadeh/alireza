@@ -24,7 +24,7 @@ const SideProjectProduct = (Props: Props) => {
   return (
     <div>
       <Link
-        href={Props.url}
+        href={Props.url} target="_blank"
         className="flex grow cursor-pointer flex-col gap-4 rounded-lg border
      border-gray-200  px-6 py-4 shadow-[0_0_8px_rgba(0,0,0,0.06)] backdrop-blur-lg hover:bg-gray-100
      dark:border-gray-500/30  dark:bg-gray-500/10

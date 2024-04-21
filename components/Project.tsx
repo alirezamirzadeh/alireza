@@ -15,7 +15,7 @@ function Project({
 }) {
   return (
     <div className="text-center">
-      <Link href={url}>
+      <Link href={url} target="_blank">
         {" "}
         <Image
           src={urlImage}

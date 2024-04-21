@@ -4,10 +4,16 @@ import React from "react";
 
 const Telegram = () => {
   return (
-    <Link href={"https://t.me/alirezamirzadeh"}  className="mt-12  flex justify-center ">
+    <Link
+      href={"https://t.me/alirezamirzadeh"}
+      target="_blank"
+      className="mt-12  flex justify-center "
+    >
       {" "}
-      <button className="flex w-full justify-center gap-2 rounded-lg 
-       bg-primary px-4 py-2 text-center text-bgdark ">
+      <button
+        className="flex w-full justify-center gap-2 rounded-lg 
+       bg-primary px-4 py-2 text-center text-bgdark "
+      >
         <Image
           alt=":)"
           width={20}
