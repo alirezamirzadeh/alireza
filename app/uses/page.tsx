@@ -19,8 +19,10 @@ const products: Product[] = [
 ];
 
 const UsesPage = () => {
+  
   return (
     <div className="mt-28">
+      <h3 className="mb-6 text-xl font-medium ">Uses</h3>
       <div className="opacity-75">
         I&apos;ve been spending hours and hours at my desk every day. So, I&apos;ve been
         continuously improving my workspace in order to boost my productivity.
