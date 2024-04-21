@@ -17,7 +17,7 @@ const GuestbookPage = () => {
     } = await supabase.auth.getUser();
 
     if (user) {
-      setUser(user.id || null);
+      setUser(user?.identities && user?.identities[0].identity_data?.name || null);
       setCheckAuth(true)
     }
     console.log(111,user);
@@ -28,7 +28,7 @@ const GuestbookPage = () => {
   const handelAddMessage = async () => {
     console.log(222,user);
     
-    const {data, error} = await supabase.from('guestbook').insert([{ user,message}]);
+    const {data, error} = await supabase.from('guestbook').insert([{ username:user,message}]);
     
     console.log(333,data,error,message);
     
