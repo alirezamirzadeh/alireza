@@ -11,7 +11,7 @@ export default function HomePage() {
     <main >
       <About />
       <Line />
-      <SideProjects />
+      <SideProjects /> 
       <Line />
       <ListBlog />
       <Line />

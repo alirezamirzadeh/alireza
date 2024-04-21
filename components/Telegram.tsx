@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Telegram = () => {
   return (
-    <div className="mt-12  flex justify-center ">
+    <Link href={"https://t.me/alirezamirzadeh"}  className="mt-12  flex justify-center ">
       {" "}
       <button className="flex w-full justify-center gap-2 rounded-lg
        bg-primary px-4 py-2 text-center text-bgdark">
@@ -21,7 +22,7 @@ const Telegram = () => {
           src="/images/icons/telegram.svg"
         />
       </button>
-    </div>
+    </Link>
   );
 };
 

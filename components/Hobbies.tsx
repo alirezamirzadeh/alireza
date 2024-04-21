@@ -10,7 +10,8 @@ const hobbies = [
     { name: "Listening to podcasts", emoji: "🎧" },
     { name: "Being a minimalist", emoji: "🌿" },
     { name: "Planning", emoji: "🗓️" },
-    { name: "Walking", emoji: "🚶" } ,
+    { name: "hike", emoji: "🚶" } ,
+    { name: "jump rope", emoji: "🤸" },
     { "name": "Chess", "emoji": "♟️" },
     { "name": "AI & ML", "emoji": "🧠" }
   ];

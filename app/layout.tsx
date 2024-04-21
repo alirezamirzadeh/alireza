@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Alireza Mirzade",
   description: "I'm a frontend developer",
   icons: {
-    icon: "/images/favicon.png"
+    icon: "/images/profile.jpg"
   }
 };
 

@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const socialMedia = [
-  { name: "dribble", url: "/" },
-  { name: "email", url: "/" },
-  { name: "github", url: "/" },
-  { name: "linkdin", url: "/" },
-  { name: "telegram", url: "/" },
+  { name: "dribble", url: "https://dribbble.com/rexalirz72" },
+  { name: "email", url: "mailto:rexalirz72@gmail.com" },
+  { name: "github", url: "https://github.com/alirezamirzadeh" },
+  { name: "linkdin", url: "https://www.linkedin.com/in/alirezamirzadeh/" },
+  { name: "telegram", url: "https://t.me/amooalireza" },
 ];
 
 const Footer = () => {
