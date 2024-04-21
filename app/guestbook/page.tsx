@@ -20,11 +20,17 @@ const GuestbookPage = () => {
       setUser(user || null);
       setCheckAuth(true)
     }
+    console.log(111,user);
+    
 
   };
 
   const handelAddMessage = async () => {
+    console.log(222,user);
+    
     const {data, error} = await supabase.from('guestbook').insert([{ user,message}]);
+    
+    console.log(333,data,error,message);
     
     if(error) {
         return console.error(error);
