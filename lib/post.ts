@@ -21,7 +21,7 @@ export async function getPosts() {
         const fileContent = await fs.readFile(filePath, "utf8");
         const { data, content } = matter(fileContent);
 
-        return { ...data, body: content } as Post;
+        return { ...data,slug:file.split(".")[0], body: content } as Post;
       })
   );
 }
