@@ -18,7 +18,7 @@ function Project({
           alt={title}
           width={320}
           height={320}
-          className="h-48 w-96 rounded-lg shadow-xl "
+          className="h-48 w-96 rounded-lg shadow-xl max-sm:h-56 max-sm:w-full"
         />
       <p className="mt-3 text-lg font-bold">{title}</p>
       <p className="text-sm opacity-60">{body}</p>
