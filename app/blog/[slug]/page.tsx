@@ -1,8 +1,15 @@
 import { notFound } from "next/navigation";
 import { Post } from "@/components/Post";
-import { getPost } from "@/lib/post";
+import { getPost, getPosts } from "@/lib/post";
 
+export async function generateStaticParams() {
+  const posts = await getPosts();
 
+ 
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
+}
 
 
 export default async function Page({ params }: { params: { slug: string } }) {
