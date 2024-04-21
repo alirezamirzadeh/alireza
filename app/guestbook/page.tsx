@@ -17,7 +17,7 @@ const GuestbookPage = () => {
     } = await supabase.auth.getUser();
 
     if (user) {
-      setUser(user || null);
+      setUser(user.id || null);
       setCheckAuth(true)
     }
     console.log(111,user);
