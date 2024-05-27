@@ -15,7 +15,7 @@ function SideProjects() {
           description={"Personal Website"}
         />
         <SideProjectProduct
-          img={"/images/group.png"}
+          img={"/images/Group.png"}
           url={"https://atomichabits.ir/"}
           urlDemo={"https://atomichabits.ir/"}
           name={"Atmoic Habits"}
