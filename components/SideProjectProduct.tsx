@@ -18,7 +18,6 @@ const SideProjectProduct = (Props: Props) => {
 
   const handelGoToDemo = (url: string) => {
     router.push(url);
-    console.log(44, url);
   };
 
   return (
