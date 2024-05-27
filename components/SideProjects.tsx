@@ -2,7 +2,6 @@
 import React from "react";
 import SideProjectProduct from "./SideProjectProduct";
 
-
 function SideProjects() {
   return (
     <div>
@@ -15,15 +14,20 @@ function SideProjects() {
           name={"Alireza"}
           description={"Personal Website"}
         />
-         <SideProjectProduct
+        <SideProjectProduct
+          img={"/images/group.png"}
+          url={"https://atomichabits.ir/"}
+          urlDemo={"https://atomichabits.ir/"}
+          name={"Atmoic Habits"}
+          description={"a Habit Tracker app"}
+        />
+        <SideProjectProduct
           img={"/images/logo.png"}
           url={"https://weatherapp-alirezamirzadeh.vercel.app/"}
           urlDemo={"https://weatherapp-alirezamirzadeh.vercel.app/"}
           name={"Weather"}
           description={"a Weather app "}
         />
-     
-        
       </div>
     </div>
   );

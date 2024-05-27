@@ -12,6 +12,13 @@ const ProjectsPage = () => {
           urlImage={"/images/alireza.jpg"}
           url="/"
         />
+         <Project
+          title="Atomic Habits"
+          body={"Habit Tracker app Made by Next.js"}
+          urlImage={"/images/atomichabits.png"}
+          url="https://atomichabits.ir/"
+          
+        />
         <Project
           title="Weather app"
           body={"Weather app Made by SvelteKit"}
