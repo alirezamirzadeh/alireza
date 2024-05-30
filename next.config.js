@@ -5,6 +5,8 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  ignoreDuringBuilds: true,
+
 };
 
 const withMDX = require("@next/mdx")();
