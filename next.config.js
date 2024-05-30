@@ -5,8 +5,10 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-  ignoreDuringBuilds: true,
-
+  eslint: {
+    quiet: true,
+  },
+  
 };
 
 const withMDX = require("@next/mdx")();
