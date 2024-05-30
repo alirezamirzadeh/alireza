@@ -5,9 +5,7 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
-  eslint: {
-    quiet: true,
-  },
+  
   
 };
 
