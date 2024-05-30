@@ -11,7 +11,7 @@ export default function WraperTransition({
   useGSAP(() => {
     gsap.from(".page", {
       opacity: 0,
-
+      
       duration: 4,
     });
   }, []);
