@@ -4,6 +4,7 @@
     "standard",
     "plugin:tailwindcss/recommended",
     "prettier"
+    
   ],
   "rules": {
     "react/no-unescaped-entities": "off",
