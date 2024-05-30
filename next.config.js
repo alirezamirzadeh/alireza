@@ -6,7 +6,6 @@ const nextConfig = {
     mdxRs: true,
   },
   
-  
 };
 
 const withMDX = require("@next/mdx")();
