@@ -5,13 +5,14 @@ import ListBlog from "@/components/ListBlog";
 import Photos from "@/components/Photos";
 import SideProjects from "@/components/SideProjects";
 import Telegram from "@/components/Telegram";
+import WraperTransition from "@/components/WraperTransition";
 
 export default function HomePage() {
   return (
-    <main >
+    <WraperTransition>
       <About />
       <Line />
-      <SideProjects /> 
+      <SideProjects />
       <Line />
       <ListBlog />
       <Line />
@@ -19,6 +20,6 @@ export default function HomePage() {
       <Line />
       <Hobbies />
       <Telegram />
-    </main>
+    </WraperTransition>
   );
 }

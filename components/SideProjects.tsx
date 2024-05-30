@@ -1,8 +1,9 @@
-"use clinet";
-import React from "react";
 import SideProjectProduct from "./SideProjectProduct";
 
+
 function SideProjects() {
+ 
+
   return (
     <div>
       <h3 className="mb-4 text-xl font-medium">Side-Projects</h3>

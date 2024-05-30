@@ -7,13 +7,14 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Providers } from "@/components/Provider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Alireza Mirzade",
   description: "I'm a frontend developer",
   icons: {
-    icon: "/images/profile.jpg"
-  }
+    icon: "/images/profile.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -27,12 +28,19 @@ export default function RootLayout({
         className="relative mx-auto flex min-h-screen max-w-xl flex-col 
      justify-between antialiased  dark:bg-bgdark"
       >
+        {" "}
         <Providers>
-          <Navbar />
-          <div className="px-8">
-            {children}
-          </div>
-          <Footer />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Navbar />
+            <div className="px-8 min-h-screen">{children}</div>
+
+            <Footer />
+          </ThemeProvider>
         </Providers>
       </body>
     </html>

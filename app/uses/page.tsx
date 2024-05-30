@@ -1,4 +1,5 @@
 import ProductUses from "@/components/ProductUses";
+import WraperTransition from "@/components/WraperTransition";
 import React from "react";
 
 interface Product {
@@ -21,6 +22,8 @@ const products: Product[] = [
 const UsesPage = () => {
   
   return (
+    <WraperTransition>
+
     <div className="mt-28">
       <h3 className="mb-6 text-xl font-medium ">Uses</h3>
       <div className="opacity-75">
@@ -38,6 +41,7 @@ const UsesPage = () => {
         ))}
       </div>
     </div>
+    </WraperTransition>
   );
 };
 

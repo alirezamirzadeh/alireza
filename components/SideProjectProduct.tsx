@@ -1,5 +1,7 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -20,10 +22,21 @@ const SideProjectProduct = (Props: Props) => {
     router.push(url);
   };
 
+  useGSAP(() => {
+    
+    gsap.fromTo(
+      ".project",
+      { opacity:0, duration: 1, x: -200, stagger: 1 },
+      { opacity:1, duration: 1, x: 0, stagger: 1 }
+    );
+
+  }, []);
+
   return (
-    <div>
+    <div className="project">
       <Link
-        href={Props.url} target="_blank"
+        href={Props.url}
+        target="_blank"
         className="flex h-36 grow cursor-pointer flex-col gap-4 rounded-lg border
      border-gray-200  px-6 py-4 shadow-[0_0_8px_rgba(0,0,0,0.06)] backdrop-blur-lg hover:bg-gray-100
      dark:border-gray-500/30  dark:bg-gray-500/10

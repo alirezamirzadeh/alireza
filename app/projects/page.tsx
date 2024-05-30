@@ -1,8 +1,11 @@
 import Project from "@/components/Project";
+import WraperTransition from "@/components/WraperTransition";
 import React from "react";
 
 const ProjectsPage = () => {
   return (
+    <WraperTransition>
+
     <div className="mt-28">
       <p className="mb-6 text-xl font-medium ">Projects</p>
       <div className="grid grid-cols-2 gap-6 max-sm:grid-cols-1 max-sm:gap-14">
@@ -28,6 +31,8 @@ const ProjectsPage = () => {
         />
       </div>
     </div>
+    </WraperTransition>
+
   );
 };
 

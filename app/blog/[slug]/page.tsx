@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Post } from "@/components/Post";
 import { getPost, getPosts } from "@/lib/post";
+import WraperTransition from "@/components/WraperTransition";
 
 export async function generateStaticParams() {
   const posts = await getPosts();
@@ -19,8 +20,12 @@ export default async function Page({ params }: { params: { slug: string } }) {
   
 
   return (
+    <WraperTransition>
+
     <div className="mt-24">
       <Post>{post.body}</Post>
     </div>
+    </WraperTransition>
+
   );
 }
