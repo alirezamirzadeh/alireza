@@ -37,14 +37,18 @@ const GuestbookPage = () => {
   };
 
   const handelSingIN = async () => {
-    await supabase.auth.signInWithOAuth({
+    const res= await supabase.auth.signInWithOAuth({
       provider: "github",
     });
+
+    console.log(222222222,res);
+    
     checkAuthentication();
   };
   useEffect(() => {
     checkAuthentication();
     setCheckAuth(!!localStorage.getItem("supabase.auth.token"));
+    console.log(111111111,!!localStorage.getItem("supabase.auth.token"));
 
     async function fetchData() {
       try {
