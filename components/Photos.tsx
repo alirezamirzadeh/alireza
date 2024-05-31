@@ -84,7 +84,7 @@ const Photos = () => {
             alt="photo"
             className={cx(
               photo % 2 ? "photo-l" : "photo-r",
-              "h-32 rounded-xl max-sm:h-40 max-sm:w-auto"
+              "h-32 rounded-xl max-sm:h-40 max-sm:w-auto opacity-0"
             )}
           />
         ))}
