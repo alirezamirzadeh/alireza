@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cx(GeistSans.variable, GeistMono.variable)}>
+    <html lang="en" suppressHydrationWarning className={cx(GeistSans.variable, GeistMono.variable)}>
       <body
         className="relative mx-auto flex min-h-screen max-w-xl flex-col 
      justify-between antialiased  dark:bg-bgdark"
