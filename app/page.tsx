@@ -7,7 +7,6 @@ import SideProjects from "@/components/SideProjects";
 import Telegram from "@/components/Telegram";
 import WraperTransition from "@/components/WraperTransition";
 
-//export const runtime = "edge";
 
 export default function HomePage() {
   return (

@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Providers } from "@/components/Provider";
 import { ThemeProvider } from "@/components/ThemeProvider";
+export const runtime = "edge";
 
 export const metadata: Metadata = {
   title: "Alireza Mirzade",
